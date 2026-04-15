@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aktualisasi Basith — Penyusunan Draf Perbaikan Perbup Siskamling</title>
+    <meta name="description"
+        content="Aktualisasi Latsar CPNS 2026 — Penyusunan Draf Perbaikan Peraturan Bupati tentang Siskamling Kabupaten Ponorogo. Ahmad Abdul Basith, S.Tr.I.P, NDH. 32.">
+    <meta name="author" content="Ahmad Abdul Basith, S.Tr.I.P">
+    <meta property="og:title" content="Aktualisasi Siskamling Ponorogo — Latsar CPNS 2026">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#040b16">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/icon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon/icon-192.png">
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" href="assets/sequence/sequence (1).jpg" as="image">
+    <link rel="preload" href="assets/basith.jpeg" as="image">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#040b16',
+                            800: '#0a1628',
+                            700: '#112240',
+                            600: '#1a365d',
+                            500: '#2563eb'
+                        },
+                        gold: {
+                            300: '#fef08a',
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                            700: '#a16207'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="bg-grid"></div>
+
+    <div id="loader">
+        <div class="loader-content">
+            <i class="fas fa-shield-alt shield-icon"></i>
+            <div class="loader-title">Memuat Aset Laporan...</div>
+            <div class="loader-bar-wrap">
+                <div class="loader-bar" id="loader-bar"></div>
+            </div>
+            <div class="loader-stats">
+                <span id="loader-percent">0%</span>
+                <span id="loader-text-status">Menginisiasi Cache Memory...</span>
+            </div>
+        </div>
+    </div>
+
+    <nav id="navbar" class="hide-for-pdf">
+        <div class="nav-brand" style="cursor: pointer;" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+            <div class="nav-logo">
+                <img src="assets/icon/icon-full.png" alt="Logo" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <div>
+                <div class="nav-brand-text">LATSAR CPNS 2026</div>
+                <div class="nav-brand-sub">Pemkab Ponorogo</div>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="#urgensi" class="nav-link">Latar Belakang</a>
+            <a href="#isu-tujuan" class="nav-link">Isu & Tujuan</a>
+            <a href="#alur" class="nav-link">Diagram Alur</a>
+            <a href="#dokumen" class="nav-link">Draf Perbup</a>
+            <a href="#matriks" class="nav-link">Matriks</a>
+            <a href="#bukti" class="nav-link">Bukti Dukung</a>
+            <a href="#galeri" class="nav-link">Dokumentasi</a>
+        </div>
+    </nav>
+
+    <div id="export-container">
+
+        <section id="sequence-container" class="pdf-include" style="position:relative; height:300vh; width: 100%;">
+            <div class="sticky top-0 left-0 w-full overflow-hidden flex flex-row hero-sticky-responsive"
+                style="background: var(--navy-dark);">
+
+                <div class="hero-content-wrapper">
+                    <div class="hero-kicker">LATSAR CPNS 2026 — PONOROGO</div>
+                    <h1 class="hero-title-main">
+                        PENYUSUNAN DRAF PERBAIKAN<br>
+                        <span class="text-gold">PERATURAN BUPATI</span> TENTANG<br>
+                        SISTEM KEAMANAN LINGKUNGAN<br>
+                        MASYARAKAT MELALUI<br>
+                        KOORDINASI LINTAS SEKTORAL<br>
+                        DI KABUPATEN PONOROGO
+                    </h1>
+                    <p class="hero-subtitle-main">Aktualisasi Nilai-Nilai Dasar ASN dalam Penguatan Regulasi Siskamling
+                        Berbasis Partisipatif</p>
+                </div>
+
+                <div id="canvas-wrapper" class="canvas-wrapper">
+                    <canvas id="sequence-canvas" class="hide-for-pdf"
+                        style="position:absolute; inset:0; width:100%; height:100%; display:block; z-index:1;"></canvas>
+                    <div class="canvas-side-fade"></div>
+                    <div class="canvas-bottom-fade"></div>
+                </div>
+
+                <div class="hero-identity-bar">
+                    <div class="hero-id-left">
+                        <div class="hero-id-name">AHMAD ABDUL BASITH, S.Tr.I.P</div>
+                        <div class="hero-id-grid">
+                            <span class="hero-id-label">NIP</span>
+                            <span class="hero-id-separator">:</span>
+                            <span class="hero-id-value">200109212025101001</span>
+
+                            <span class="hero-id-label">JABATAN</span>
+                            <span class="hero-id-separator">:</span>
+                            <span class="hero-id-value">Polisi Pamong Praja Ahli Pertama</span>
+
+                            <span class="hero-id-label">NDH</span>
+                            <span class="hero-id-separator">:</span>
+                            <span class="hero-id-value">32</span>
+                        </div>
+                    </div>
+                    <div class="hero-id-divider"></div>
+                    <div class="hero-id-right">
+                        <div class="hero-id-grid">
+                            <span class="hero-id-label">PENGUJI</span>
+                            <span class="hero-id-separator">:</span>
+                            <span class="hero-id-value">Dr. UKHTI RAUDHATUL JANNAH, S.Pd., M.Pd</span>
+
+                            <span class="hero-id-label">MENTOR</span>
+                            <span class="hero-id-separator">:</span>
+                            <span class="hero-id-value">ERRY SETIYOSO BIROWO, SP</span>
+
+                            <span class="hero-id-label"><em>COACH</em></span>
+                            <span class="hero-id-separator">:</span>
+                            <span class="hero-id-value">RANDY FERBIANO RUHYANA, S.T., M.MT</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="urgensi" class="pdf-include">
+            <div class="section">
+                <div class="section-header center reveal">
+                    <h2 class="section-title">Latar Belakang</h2>
+                </div>
+
+                <div class="grid-latar-belakang">
+                    <div class="lb-card reveal delay-1">
+                        <i class="fas fa-file-signature lb-card-icon"></i>
+                        <div class="lb-card-title">Instruksi Pusat</div>
+                        <div class="lb-card-text">
+                            Penguatan Siskamling menjadi mendesak pasca keluarnya <strong>SE Mendagri No.
+                                300.1.4/e.1/BAK (3 Sep 2025)</strong> yang menginstruksikan Pemerintah Daerah untuk
+                            menghidupkan kembali Siskamling di tingkat RT/RW demi stabilitas keamanan.
+                        </div>
+                    </div>
+                    <div class="lb-card reveal delay-2">
+                        <i class="fas fa-search-location lb-card-icon"></i>
+                        <div class="lb-card-title">Fakta Kuesioner</div>
+                        <div class="lb-card-text">
+                            Implementasi pusat terhambat ketiadaan payung hukum di daerah. Kuesioner (Maret 2026)
+                            menunjukkan <strong>100% Kasi Trantib & Perangkat Desa</strong> belum mengetahui adanya
+                            Perbup yang aplikatif sebagai pedoman operasional Siskamling.
+                        </div>
+                    </div>
+                    <div class="lb-card reveal delay-3">
+                        <i class="fas fa-users-slash lb-card-icon"></i>
+                        <div class="lb-card-title">Wawancara Kabid</div>
+                        <div class="lb-card-text">
+                            Meski draf awal (2025) pernah dikoordinasikan ke Bagian Hukum, draf tersebut <strong>belum
+                                melalui sinkronisasi mendalam dengan <em>stakeholder</em> kewilayahan</strong>
+                            (Kecamatan/Desa), sehingga berisiko tidak aplikatif di lapangan.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="isu-tujuan" class="pdf-include">
+            <div class="section pt-0">
+                <div class="grid-isu-tujuan">
+                    <div class="card-isu reveal hover-lift delay-1">
+                        <div class="card-isu-title"><i class="fas fa-exclamation-triangle"></i> Rumusan Isu Utama</div>
+                        <div class="card-isu-text">Belum tersusunnya draf Perbup Siskamling yang aplikatif sebagai
+                            landasan hukum penguatan kamtibmas di Kabupaten Ponorogo.</div>
+                    </div>
+                    <div class="card-tujuan reveal hover-lift delay-2">
+                        <div class="card-tujuan-title"><i class="fas fa-bullseye"></i> Tujuan Khusus Aktualisasi</div>
+                        <div class="card-tujuan-text">Menghasilkan dokumen Draf Perbaikan Peraturan Bupati tentang
+                            Siskamling yang komprehensif, mudah diterapkan (aplikatif), dan siap diajukan untuk proses
+                            legalisasi.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="alur" class="pdf-include">
+            <div class="section">
+                <div class="section-header center reveal">
+                    <h2 class="section-title">Alur Kegiatan</h2>
+                    <p class="text-content" style="text-align:center; max-width:700px; margin:16px auto 0;">Sistematika
+                        11 langkah yang dilaksanakan selama masa <em>habituasi</em> untuk memecahkan isu
+                        dan mencapai tujuan aktualisasi secara terukur.</p>
+                </div>
+
+                <div class="timeline">
+                    <div class="tl-item reveal">
+                        <div class="tl-node-col">
+                            <div class="tl-node">1</div>
+                        </div>
+                        <div class="tl-card">
+                            <div class="tl-title"><i class="fas fa-comments"></i> Konsultasi dengan Mentor dan
+                                Coach/Pembimbing</div>
+                            <div class="tl-desc">Melakukan konsultasi terkait penyusunan desain dan rencana pelaksanaan
+                                kegiatan aktualisasi agar selaras dengan arahan pimpinan.</div>
+                        </div>
+                    </div>
+                    <div class="tl-item reveal">
+                        <div class="tl-node-col">
+                            <div class="tl-node">2</div>
+                        </div>
+                        <div class="tl-card">
+                            <div class="tl-title"><i class="fas fa-file-download"></i> Melakukan pengumpulan Draft
+                                Perbup Siskamling</div>
+                            <div class="tl-desc">Menginventarisasi draf awal Siskamling versi 2025 beserta studi
+                                literatur regulasi terkait dari Bagian Hukum Setda.</div>
+                        </div>
+                    </div>
+                    <div class="tl-item reveal">
+                        <div class="tl-node-col">
+                            <div class="tl-node">3</div>
+                        </div>
+                        <div class="tl-card">
+                            <div class="tl-title"><i class="fas fa-search-location"></i> Melakukan penjaringan aspirasi
+                                teknis</div>
+                            <div class="tl-desc">Melalui observasi lapangan langsung di Poskamling dan wawancara dengan
+                                pelaksana akar rumput.</div>
+                        </div>
+                    </div>
+                    <div class="tl-item reveal">
+                        <div class="tl-node-col">
+                            <div class="tl-node">4</div>
+                        </div>
+                        <div class="tl-card">
+                            <div class="tl-title"><i class="fas fa-users-cog"></i> Melakukan koordinasi lintas sektoral
+                            </div>
+                            <div class="tl-desc">Rapat teknis yang difasilitasi Mentor untuk penyelarasan substansi draf
+                                melibatkan unsur Kecamatan, Babinsa, dan Bhabinkamtibmas.</div>
+                        </div>
+                    </div>
+                    <div class="tl-item reveal">
+                        <div class="tl-node-col">
+                            <div class="tl-node">5</div>
+                        </div>
+                        <div class="tl-card">
+                            <div class="tl-title"><i class="fas fa-pen-nib"></i> Menyusun perbaikan draf Perbup
+                                Siskamling</div>
+                            <div class="tl-desc">Melakukan penyusunan ulang pasal-pasal (*legal drafting*) berdasarkan
+                                sinkronisasi hasil masukan lintas sektoral.</div>
+                        </div>
+                    </div>
+                    <div class="tl-item reveal">
+                        <div class="tl-node-col">
+                            <div class="tl-node">6</div>
+                        </div>
+                        <div class="tl-card">
+                            <div class="tl-title"><i class="fas fa-chalkboard-teacher"></i> Melakukan forum uji publik
+                                terbatas</div>
+                            <div class="tl-desc">Pemaparan draf revisi kepada perwakilan pemangku kepentingan guna
+                                mendapatkan masukan teknis penyempurnaan akhir.</div>
+                        </div>
+                    </div>
+                    <div class="tl-item reveal">
+                        <div class="tl-node-col">
+                            <div class="tl-node">7</div>
+                        </div>
+                        <div class="tl-card">
+                            <div class="tl-title"><i class="fas fa-check-double"></i> Melakukan finalisasi draf
+                                perbaikan Perbup</div>
+                            <div class="tl-desc">Menyempurnakan redaksional draf berdasarkan hasil catatan uji publik
+                                dan telaah akhir dari unit kerja.</div>
+                        </div>
+                    </div>
+                    <div class="tl-item reveal">
+                        <div class="tl-node-col">
+                            <div class="tl-node">8</div>
+                        </div>
+                        <div class="tl-card">
+                            <div class="tl-title"><i class="fas fa-handshake"></i> Menyerahkan dokumen draf perbaikan
+                                final</div>
+                            <div class="tl-desc">Dokumen diserahkan secara resmi kepada pimpinan Satpol PP serta Bagian
+                                Hukum Setda untuk proses pengajuan legalisasi.</div>
+                        </div>
+                    </div>
+                    <div class="tl-item reveal">
+                        <div class="tl-node-col">
+                            <div class="tl-node">9</div>
+                        </div>
+                        <div class="tl-card">
+                            <div class="tl-title"><i class="fas fa-bullhorn"></i> Melakukan sosialisasi final draf
+                                perbaikan</div>
+                            <div class="tl-desc">Mensosialisasikan ringkasan substansi draf final kepada pihak-pihak
+                                terkait sebagai bentuk transparansi informasi.</div>
+                        </div>
+                    </div>
+                    <div class="tl-item reveal">
+                        <div class="tl-node-col">
+                            <div class="tl-node">10</div>
+                        </div>
+                        <div class="tl-card">
+                            <div class="tl-title"><i class="fas fa-chart-line"></i> Melakukan evaluasi terhadap seluruh
+                                rangkaian kegiatan</div>
+                            <div class="tl-desc">Menilai efektivitas capaian aktualisasi yang telah dilaksanakan
+                                terhadap pemecahan isu utama.</div>
+                        </div>
+                    </div>
+                    <div class="tl-item reveal">
+                        <div class="tl-node-col">
+                            <div class="tl-node">11</div>
+                        </div>
+                        <div class="tl-card">
+                            <div class="tl-title"><i class="fas fa-book"></i> Menyusun Laporan Kegiatan Aktualisasi
+                            </div>
+                            <div class="tl-desc">Tahap pendokumentasian bukti administrasi dan penyelesaian laporan
+                                untuk persiapan Seminar Akhir.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dokumen" class="pdf-include">
+            <div class="section">
+                <div class="section-header center reveal">
+                    <h2 class="section-title">Hasil Kegiatan</h2>
+                    <p class="text-content" style="text-align:center; max-width:700px; margin:16px auto 0;">Representasi
+                        fisik dokumen Draf Lama dan Draf Final yang telah siap untuk dilegalisasi.</p>
+                </div>
+
+                <div class="doc-grid">
+                    <div class="doc-card reveal delay-1 cursor-pointer"
+                        onclick="openPdfModal('Draf Perbup Lama', 'assets/draf-perbup-awal.pdf')">
+                        <div class="doc-head">
+                            <div class="doc-badge">Draft 0 (2025)</div>
+                            <i class="fas fa-file-excel" style="color:#ef4444; font-size:1.2rem;"></i>
+                        </div>
+                        <div class="doc-body">
+                            <div class="doc-thumb-wrap">
+                                <span class="badge-status before-badge">BEFORE</span>
+                                <img src="assets/perbup_awal.jpg" alt="Draf Lama"
+                                    onerror="this.src='https://placehold.co/600x800/112240/ef4444?text=Perbup+Lama'">
+                            </div>
+
+                            <div class="doc-title">Draf Perbup Lama</div>
+                            <div class="doc-desc">Bersifat internal birokrasi, kurang aplikatif, minim panduan
+                                operasional di tingkat desa.</div>
+                            <div class="doc-stats">
+                                <span class="doc-stat-item">8 BAB</span>
+                                <span class="doc-stat-item">19 Pasal</span>
+                            </div>
+                            <button class="btn-doc">Lihat Pratinjau PDF</button>
+                        </div>
+                    </div>
+
+                    <div class="doc-card final reveal delay-2 cursor-pointer"
+                        onclick="openPdfModal('Draf Perbup FINAL (Siap Legalisasi)', 'assets/draf-perbup-final.pdf')">
+                        <div class="doc-head">
+                            <div class="doc-badge">Siap Legalisasi ✓</div>
+                            <i class="fas fa-check-circle" style="color:#10b981; font-size:1.2rem;"></i>
+                        </div>
+                        <div class="doc-body">
+                            <div class="doc-thumb-wrap">
+                                <span class="badge-status after-badge">AFTER</span>
+                                <img src="assets/perbup_final.jpg" alt="Draf Final"
+                                    onerror="this.src='https://placehold.co/600x800/112240/10b981?text=Perbup+Final'">
+                            </div>
+
+                            <div class="doc-title" style="color:#34d399;">Draf Perbup Final</div>
+                            <div class="doc-desc">Komprehensif, partisipatif, mengatur pendanaan legal, sanksi
+                                administratif, & sinergi pilar.</div>
+                            <div class="doc-stats">
+                                <span class="doc-stat-item" style="color:#34d399; border-color:rgba(16,185,129,0.3);">11
+                                    BAB</span>
+                                <span class="doc-stat-item" style="color:#34d399; border-color:rgba(16,185,129,0.3);">22
+                                    Pasal</span>
+                            </div>
+                            <button class="btn-doc">Buka Draf Final PDF</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="matriks" class="pdf-include">
+            <div class="section">
+                <div class="section-header center reveal">
+                    <div class="section-subtitle">Analisis Perubahan</div>
+                    <h2 class="section-title">Matriks Komparasi Substansi</h2>
+                    <p class="text-content" style="text-align:center; max-width:800px; margin:16px auto 0;">Dokumentasi
+                        komprehensif poin-poin perubahan dari draf awal ke draf final sebagai bentuk pertanggungjawaban
+                        akademis legal drafting.</p>
+                </div>
+
+                <div class="matriks-container reveal delay-1"
+                    style="padding: 0; display: flex; flex-direction: column; gap: 0;">
+                    <div class="matriks-top" style="border-bottom:none; padding-bottom: 20px;">
+                        <div class="matriks-title-bar"><i class="fas fa-table"></i> Ringkasan Matriks Komparasi</div>
+                    </div>
+
+                    <div class="table-wrapper" style="max-height: none; background: rgba(0,0,0,0.2);">
+                        <table class="table-komparasi">
+                            <thead>
+                                <tr>
+                                    <th style="width:20%">Aspek Perubahan</th>
+                                    <th style="width:20%">Draf Lama</th>
+                                    <th style="width:25%">Draf Final</th>
+                                    <th style="width:35%">Makna & Dampak Perubahan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="td-pasal">Jumlah BAB</td>
+                                    <td class="td-lama">8 BAB</td>
+                                    <td class="td-baru">11 BAB</td>
+                                    <td class="td-analisis">+3 BAB baru (VII Pembinaan-Pengawasan, VIII Pendanaan, X
+                                        Sanksi Administratif). Dari regulasi dasar menjadi regulasi
+                                        operasional-komprehensif.</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-pasal">Jumlah Pasal</td>
+                                    <td class="td-lama">19 Pasal</td>
+                                    <td class="td-baru">22 Pasal</td>
+                                    <td class="td-analisis">+3 Pasal baru. Peraturan tumbuh organik seiring penambahan
+                                        mekanisme pelaksanaan dan akuntabilitas.</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-pasal">Dasar Konstitusional</td>
+                                    <td class="td-lama">Tidak ada</td>
+                                    <td class="td-baru">Pasal 18 ayat (6) UUD 1945</td>
+                                    <td class="td-analisis">Perbaikan cacat formil potensial. Tanpa dasar UUD, Perbup
+                                        rentan dalam uji materiil.</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-pasal">Dasar UU Desa</td>
+                                    <td class="td-lama">Tidak ada</td>
+                                    <td class="td-baru">UU 6/2014 jo. UU 3/2024</td>
+                                    <td class="td-analisis">Siskamling berbasis desa — UU Desa menjadi landasan
+                                        kewenangan yang sah dan mutakhir.</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-pasal">Dasar Permendagri<br>Satlinmas</td>
+                                    <td class="td-lama">Tidak ada</td>
+                                    <td class="td-baru">Permendagri 42/2017</td>
+                                    <td class="td-analisis">Menopang kewajiban pelatihan Satlinmas di Pasal 16 —
+                                        koherensi dasar hukum dengan norma.</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-pasal">Kerangka Pembinaan</td>
+                                    <td class="td-lama" style="font-size: 0.85rem;">Tidak ada (hanya Pasal 5 implisit)
+                                    </td>
+                                    <td class="td-baru">3 bentuk + 5 materi pelatihan wajib</td>
+                                    <td class="td-analisis">SDM Siskamling terjamin kualitasnya melalui standar
+                                        pelatihan yang terukur dan dapat diaudit.</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-pasal">Pengawasan Terstruktur</td>
+                                    <td class="td-lama">Pengendalian koordinatif informal</td>
+                                    <td class="td-baru">Monitoring, pemetaan, evaluasi oleh Satpol PP</td>
+                                    <td class="td-analisis">Siklus PDCA terbentuk: dari reaktif menjadi proaktif dan
+                                        sistematis.</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-pasal">Akuntabilitas Pelaporan</td>
+                                    <td class="td-lama">Tidak ada standar periodik</td>
+                                    <td class="td-baru">Laporan 6 bulan + insidental KLB</td>
+                                    <td class="td-analisis">Bupati mendapat informasi berkala — dasarnya kebijakan
+                                        lanjutan dan alokasi anggaran.</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-pasal">Pendanaan Siskamling</td>
+                                    <td class="td-lama">Tidak ada BAB khusus</td>
+                                    <td class="td-baru">4 sumber dana + standar per RT + akuntabilitas berjenjang</td>
+                                    <td class="td-analisis">Siskamling berkelanjutan secara fiskal, tidak lagi hanya
+                                        mengandalkan swadaya warga.</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-pasal">Sanksi Pelanggaran</td>
+                                    <td class="td-lama">Tidak ada sama sekali</td>
+                                    <td class="td-baru">Teguran lisan dan tertulis oleh Kades/Lurah</td>
+                                    <td class="td-analisis">Peraturan kini enforceable. Siklus norma lengkap: kewajiban
+                                        → larangan → sanksi.</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-pasal">Definisi Siskamling</td>
+                                    <td class="td-lama">Berbasis "sistem mekanis"</td>
+                                    <td class="td-baru">Berbasis "partisipasi aktif warga sipil"</td>
+                                    <td class="td-analisis">Pergeseran paradigma: dari pendekatan tekno-birokratis ke
+                                        pendekatan komunitas partisipatif.</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-pasal">Dasar Hukum Total</td>
+                                    <td class="td-lama">6 angka (tanpa UUD)</td>
+                                    <td class="td-baru">9 angka (dengan UUD, UU Desa, Permendagri)</td>
+                                    <td class="td-analisis">Hierarki dasar hukum lengkap dari konstitusi hingga Perda.
+                                        Tidak ada celah normatif.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div
+                        style="padding: 40px; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.08); display: flex; justify-content: center; background: rgba(0,0,0,0.3);">
+                        <div class="doc-card matriks hover-lift cursor-pointer"
+                            onclick="openPdfModal('Matriks Komparasi Draf Perbup', 'assets/matriks.pdf')"
+                            style="width:100%; max-width:800px; text-align:center; border-color: rgba(234, 179, 8, 0.3); background: linear-gradient(180deg, var(--navy-mid), #2a1f00);">
+                            <div class="doc-head"
+                                style="background: rgba(234, 179, 8, 0.1); border-bottom-color: rgba(234, 179, 8, 0.2);">
+                                <div class="doc-badge" style="color: #facc15;">Dokumen Matriks PDF</div>
+                                <i class="fas fa-file-pdf" style="color:#ef4444; font-size:1.2rem;"></i>
+                            </div>
+                            <div class="doc-body" style="padding: 30px;">
+
+                                <div class="doc-thumb-wrap"
+                                    style="height: 300px; max-width: 600px; margin: 0 auto 24px auto; border-color: rgba(234, 179, 8, 0.4);">
+                                    <img src="assets/matriks.jpg" alt="Matriks Komparasi"
+                                        onerror="this.src='https://placehold.co/800x400/112240/eab308?text=Matriks+Komparasi'">
+                                </div>
+
+                                <div class="doc-title" style="color:#facc15;">Matriks Komparasi Draf Perbup</div>
+                                <div class="doc-desc" style="color: var(--text-white);">Akses dokumen salinan digital
+                                    matriks perubahan secara lengkap dalam bentuk PDF.</div>
+                                <button class="btn-doc hover-lift"
+                                    style="background: rgba(234, 179, 8, 0.1); color: #facc15; border-color: rgba(234, 179, 8, 0.3); margin-top: 20px;">Buka
+                                    Seluruh Dokumen Matriks Komparasi PDF</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <section id="bukti" class="hide-for-pdf">
+        <div class="section">
+            <div class="section-header center reveal">
+                <div class="section-subtitle">Administrasi Aktualisasi</div>
+                <h2 class="section-title">Bukti Dukung</h2>
+                <p class="text-content" style="text-align:center; max-width:600px; margin:16px auto 0;">Klik pada
+                    dokumen
+                    berikut untuk membuka pratinjau bukti pendukung yang dilampirkan dalam aktualisasi.
+                </p>
+            </div>
+            <div id="bukti-grid-container"
+                style="display:grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; margin-top: 32px;">
+            </div>
+        </div>
+    </section>
+
+    <section id="galeri" class="hide-for-pdf">
+        <div class="section">
+            <div class="section-header center reveal">
+                <div class="section-subtitle">Jejak Langkah Visual</div>
+                <h2 class="section-title">Dokumentasi Kegiatan</h2>
+                <p class="text-content" style="text-align:center; max-width:600px; margin:16px auto 0;">Klik foto untuk
+                    memperbesar dan meninjau keterangan spesifik dokumentasi foto.</p>
+            </div>
+            <div class="galeri-grid" id="galeri-grid-container">
+            </div>
+        </div>
+    </section>
+
+    <section id="media-qr" class="hide-for-pdf">
+        <div class="mq-grid">
+            <div class="video-card reveal hover-lift delay-1">
+                <div class="vid-badge">
+                    <div class="badge-dot" style="background:#ef4444;box-shadow:0 0 10px #ef4444;"></div> Dokumentasi
+                    Bergerak
+                </div>
+                <div class="vid-title">Video Presentasi<br>Aktualisasi Latsar</div>
+                <div class="vid-desc">Saksikan secara komprehensif alur perjalanan penyusunan draf Regulasi, mulai
+                    dari konsultasi awal hingga finalisasi draf Perbup. Tonton video ini untuk melihat secara penuh.
+                </div>
+                <button class="btn-youtube" onclick="alert('Membuka tautan YouTube...')">
+                    <i class="fab fa-youtube" style="font-size:1.4rem;"></i> Putar Video Kegiatan
+                </button>
+            </div>
+
+            <div class="qr-container">
+                <div class="qr-item reveal hover-lift delay-2"
+                    onclick="alert('Arahkan kamera HP ke QR Code ini untuk membuka Video YouTube.')">
+                    <div class="qr-box-img"><img src="assets/QR VIDEO LATSAR A.ABDUL BASITH.png" alt="QR Video"
+                            onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=VideoURL&color=0a1628'">
+                    </div>
+                    <div>
+                        <div class="qr-info-title"><i class="fas fa-play-circle"></i> Scan URL Video</div>
+                        <div class="qr-info-desc">Pindai kode QR ini menggunakan kamera ponsel Anda untuk langsung
+                            memutar video presentasi aktualisasi di aplikasi YouTube.</div>
+                    </div>
+                </div>
+                <div class="qr-item reveal hover-lift delay-3"
+                    onclick="alert('Arahkan kamera HP ke QR Code ini untuk mengunduh Laporan Aktualisasi berformat PDF.')">
+                    <div class="qr-box-img"><img
+                            src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://drive.google.com/drive/folders/ID_FOLDER&color=0a1628"
+                            crossorigin="anonymous" alt="QR Laporan"></div>
+                    <div>
+                        <div class="qr-info-title"><i class="fas fa-file-pdf"></i> Scan Full Laporan</div>
+                        <div class="qr-info-desc">Pindai kode QR ini untuk mengakses <em>repository cloud</em> yang
+                            berisi dokumen cetak Laporan Aktualisasi.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="hide-for-pdf">
+        <div class="f-profile reveal">
+            <div class="f-img-wrap">
+                <img src="assets/basith.jpeg" alt="Ahmad Abdul Basith" class="f-img"
+                    onerror="this.src='https://placehold.co/200x200/112240/eab308?text=AB'">
+            </div>
+            <div class="f-name">Ahmad Abdul Basith, S.Tr.I.P</div>
+            <div class="f-role">Polisi Pamong Praja Ahli Pertama</div>
+            <div class="f-details">
+                <span><i class="fas fa-id-badge"></i> NDH. 32</span>
+                <span><i class="fas fa-id-card"></i> NIP. 200109212025101001</span>
+                <span><i class="fas fa-map-marker-alt"></i> Trenggalek, 21 September 2001</span>
+            </div>
+        </div>
+        <div class="f-copy">&copy; 2026 Ahmad Abdul Basith — Disusun sebagai pertanggungjawaban akademis Pelatihan Dasar
+            CPNS Pemerintah Kabupaten Ponorogo.</div>
+    </footer>
+
+    <div class="modal-backdrop" id="pdf-modal" onclick="closeModalOutside(event, 'pdf-modal')">
+        <div class="modal-box">
+            <div class="modal-head">
+                <div class="modal-title"><i class="fas fa-file-pdf" style="color: #ef4444; font-size:1.4rem;"></i> <span
+                        id="pdf-m-title">Pratinjau Dokumen</span></div>
+                <button class="modal-close" onclick="closeModal('pdf-modal')"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body" id="pdf-modal-body"
+                style="background: #112240; padding: 10px; overflow-y: auto; height: 75vh;">
+                <div id="pdf-render-container"
+                    style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-backdrop" id="lightbox" onclick="closeModalOutside(event, 'lightbox')">
+        <div class="modal-box"
+            style="max-width:1100px; background:transparent; box-shadow:none; border:none; height:100vh; max-height:none; width: 100vw;">
+            <div class="modal-head"
+                style="background: rgba(4,11,22,0.95); border-bottom:1px solid rgba(255,255,255,0.05); z-index: 10;">
+                <div class="modal-title" style="color:var(--gold-main);"><i class="fas fa-camera"></i> <span
+                        id="lb-title">Galeri</span></div>
+                <div style="display:flex; gap: 8px;">
+                    <button onclick="zoomLbImage(0.25)"
+                        style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); color: white; border: none; font-size: 1.1rem; cursor:pointer;"
+                        title="Zoom In"><i class="fas fa-search-plus"></i></button>
+                    <button onclick="zoomLbImage(-0.25)"
+                        style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); color: white; border: none; font-size: 1.1rem; cursor:pointer;"
+                        title="Zoom Out"><i class="fas fa-search-minus"></i></button>
+                    <button onclick="resetZoomLb()"
+                        style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); color: white; border: none; font-size: 1.1rem; cursor:pointer;"
+                        title="Reset Zoom"><i class="fas fa-sync-alt"></i></button>
+                    <button class="modal-close" onclick="closeModal('lightbox')" style="margin-left: 8px;"><i
+                            class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="modal-body"
+                style="padding:0; background: rgba(4,11,22,0.9); backdrop-filter: blur(10px); position: relative; display:flex; flex-direction:column; overflow: hidden;">
+                <div id="lb-img-container" style="flex:1; overflow: auto; position: relative;">
+                    <img id="lb-img" src="" alt="Zoom Image"
+                        style="height:70vh; max-width: none; width: auto; object-fit:contain; display:block; margin:0 auto; padding:20px; transition: transform 0.3s; transform-origin: top center;">
+                </div>
+                <button id="lb-prev" onclick="lbNavigate(-1, event)"
+                    style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.6); color: var(--gold-main); border: 1px solid var(--gold-main); width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; display:flex; align-items:center; justify-content:center; transition:0.3s; z-index:10;"><i
+                        class="fas fa-chevron-left"></i></button>
+                <button id="lb-next" onclick="lbNavigate(1, event)"
+                    style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.6); color: var(--gold-main); border: 1px solid var(--gold-main); width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; display:flex; align-items:center; justify-content:center; transition:0.3s; z-index:10;"><i
+                        class="fas fa-chevron-right"></i></button>
+                <div class="lb-caption" style="z-index: 10;">
+                    <h3 id="lb-caption-title">Caption Title</h3>
+                    <p id="lb-desc">Keterangan detail foto.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
